@@ -1,0 +1,98 @@
+[gd_scene load_steps=15 format=3 uid="uid://bvoodcsmeakia"]
+
+[ext_resource type="Texture2D" uid="uid://b5os0j32hn3tu" path="res://assets/effects/Flamethrower-Sheet.png" id="1_4pqaj"]
+[ext_resource type="PackedScene" uid="uid://bl3jeun17e6vd" path="res://scenes/killzone.tscn" id="2_gdcpv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k5ia"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gi4bd"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(96, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37144"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(192, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a76nh"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(0, 48, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52rt8"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(96, 48, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl8kx"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(192, 48, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffj8l"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(0, 96, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mapmo"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(96, 96, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyrjd"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(192, 96, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccqvv"]
+atlas = ExtResource("1_4pqaj")
+region = Rect2(0, 144, 96, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cpvdi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k5ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gi4bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37144")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a76nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52rt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl8kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffj8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mapmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyrjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccqvv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6np22"]
+size = Vector2(62, 9)
+
+[node name="Flamethrower" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cpvdi")
+autoplay = "default"
+frame_progress = 0.159057
+
+[node name="Killzone" parent="." instance=ExtResource("2_gdcpv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_6np22")
