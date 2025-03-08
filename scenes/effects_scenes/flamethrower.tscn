@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bvoodcsmeakia"]
 
 [ext_resource type="Texture2D" uid="uid://b5os0j32hn3tu" path="res://assets/effects/Flamethrower-Sheet.png" id="1_4pqaj"]
-[ext_resource type="PackedScene" uid="uid://bl3jeun17e6vd" path="res://scenes/killzone.tscn" id="2_gdcpv"]
+[ext_resource type="PackedScene" uid="uid://bl3jeun17e6vd" path="res://scenes/component_scenes/hitbox_component.tscn" id="2_gdcpv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0k5ia"]
 atlas = ExtResource("1_4pqaj")
@@ -81,8 +81,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6np22"]
-size = Vector2(62, 9)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pqaj"]
+size = Vector2(65, 12)
 
 [node name="Flamethrower" type="Node2D"]
 
@@ -91,8 +91,9 @@ sprite_frames = SubResource("SpriteFrames_cpvdi")
 autoplay = "default"
 frame_progress = 0.159057
 
-[node name="Killzone" parent="." instance=ExtResource("2_gdcpv")]
+[node name="HitboxComponent" parent="." instance=ExtResource("2_gdcpv")]
+position = Vector2(17, -24)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_6np22")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(-19.5, 24)
+shape = SubResource("RectangleShape2D_4pqaj")

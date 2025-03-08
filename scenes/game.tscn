@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://c3v7wk6dh3e11" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://cuu4ofx47hhvq" path="res://assets/midground/spring_.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dwieu3dkimk51" path="res://scenes/objects_scenes/coin.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://bl3jeun17e6vd" path="res://scenes/killzone.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://7jsjriamo1f1" path="res://scenes/effects_scenes/fire_sparks.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cxhwxw5bg7imy" path="res://scenes/static_platforms_scenes/static_platform.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://bq6yo1x16uf5w" path="res://scenes/effects_scenes/electric.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dw7i5shafffxl" path="res://scenes/component_scenes/killzone.tscn" id="8_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://bvoodcsmeakia" path="res://scenes/effects_scenes/flamethrower.tscn" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
@@ -406,7 +406,7 @@ texture = ExtResource("1_yqjtg")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lbhrr"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vtaks"]
 
 [node name="Game" type="Node2D"]
 
@@ -415,6 +415,7 @@ tile_map_data = PackedByteArray("AAAXAB4AAAAAAAMAAAAXAB8AAAAAAAQAAAAYAB4AAAABAAM
 tile_set = SubResource("TileSet_lbhrr")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+unique_name_in_owner = true
 z_index = 5
 position = Vector2(509, 460)
 
@@ -424,12 +425,6 @@ process_callback = 0
 limit_bottom = 600
 limit_smoothed = true
 position_smoothing_enabled = true
-
-[node name="Killzone" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(529, 577)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_lbhrr")
 
 [node name="Coins" type="Node" parent="."]
 
@@ -445,9 +440,6 @@ position = Vector2(628, 467)
 [node name="Coin4" parent="Coins" instance=ExtResource("3_lnu2h")]
 position = Vector2(660, 472)
 
-[node name="Fire Sparks" parent="." instance=ExtResource("5_iywne")]
-position = Vector2(401, 432)
-
 [node name="StaticPlatforms" type="Node" parent="."]
 
 [node name="StaticPlatform" parent="StaticPlatforms" instance=ExtResource("6_p57ef")]
@@ -462,8 +454,19 @@ position = Vector2(851, 419)
 [node name="StaticPlatform4" parent="StaticPlatforms" instance=ExtResource("6_p57ef")]
 position = Vector2(920, 460)
 
-[node name="Electric" parent="." instance=ExtResource("7_u5sy4")]
+[node name="Killzone" parent="." instance=ExtResource("8_0tnpc")]
+position = Vector2(322, 620)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_vtaks")
+
+[node name="Effects" type="Node" parent="."]
+
+[node name="Electric" parent="Effects" instance=ExtResource("7_u5sy4")]
 position = Vector2(1029, 461)
 
-[node name="Flamethrower" parent="." instance=ExtResource("8_gee14")]
+[node name="Flamethrower" parent="Effects" instance=ExtResource("8_gee14")]
 position = Vector2(1251, 442)
+
+[node name="Fire Sparks" parent="Effects" instance=ExtResource("5_iywne")]
+position = Vector2(401, 432)
