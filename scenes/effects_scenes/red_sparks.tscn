@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://cn5s348i47fnr"]
+
+[ext_resource type="Texture2D" uid="uid://rdubarmuxsnx" path="res://assets/effects/Sparks-Sheet.png" id="1_fxuhs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6awku"]
+atlas = ExtResource("1_fxuhs")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q263k"]
+atlas = ExtResource("1_fxuhs")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pomuj"]
+atlas = ExtResource("1_fxuhs")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eiqh2"]
+atlas = ExtResource("1_fxuhs")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk1pf"]
+atlas = ExtResource("1_fxuhs")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcn0q"]
+atlas = ExtResource("1_fxuhs")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4t0pc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6awku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q263k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pomuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eiqh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk1pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcn0q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="RedSparks" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4t0pc")
+autoplay = "default"
+frame_progress = 0.753381

@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://bejflugm4dyom"]
+
+[ext_resource type="Texture2D" uid="uid://bgns7g6kfk2m3" path="res://assets/parallax/hills/Hills Layer 01.png" id="1_mvbpv"]
+[ext_resource type="Texture2D" uid="uid://iajpoy3exhqf" path="res://assets/parallax/hills/Hills Layer 02.png" id="2_1j3yp"]
+[ext_resource type="Texture2D" uid="uid://omd21x0ki3sm" path="res://assets/parallax/hills/Hills Layer 03.png" id="3_7wgat"]
+[ext_resource type="Texture2D" uid="uid://brh2pg0mwxe6c" path="res://assets/parallax/hills/Hills Layer 04.png" id="4_o55wp"]
+[ext_resource type="Texture2D" uid="uid://ct0jyafoqv3fw" path="res://assets/parallax/hills/Hills Layer 05.png" id="5_ueye1"]
+[ext_resource type="Texture2D" uid="uid://b8mtipsfdwc4f" path="res://assets/parallax/hills/Hills Layer 06.png" id="6_jwhk7"]
+
+[node name="Hills" type="Node2D"]
+
+[node name="Layer1" type="Parallax2D" parent="."]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer1"]
+texture = ExtResource("1_mvbpv")
+centered = false
+
+[node name="Layer2" type="Parallax2D" parent="."]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer2"]
+texture = ExtResource("2_1j3yp")
+centered = false
+
+[node name="Layer3" type="Parallax2D" parent="."]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer3"]
+texture = ExtResource("3_7wgat")
+centered = false
+
+[node name="Layer4" type="Parallax2D" parent="."]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer4"]
+texture = ExtResource("4_o55wp")
+centered = false
+
+[node name="Layer5" type="Parallax2D" parent="."]
+scale = Vector2(1.5, 1.5)
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer5"]
+texture = ExtResource("5_ueye1")
+centered = false
+
+[node name="Layer6" type="Parallax2D" parent="."]
+scale = Vector2(1.5, 1.5)
+repeat_size = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer6"]
+texture = ExtResource("6_jwhk7")
+centered = false

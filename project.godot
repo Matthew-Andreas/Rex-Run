@@ -13,7 +13,6 @@ config_version=5
 config/name="CS485-2DGame"
 run/main_scene="uid://b5exh5yuvs64f"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 

@@ -1,0 +1,150 @@
+[gd_scene load_steps=22 format=3 uid="uid://c2r8aue8nvlwq"]
+
+[ext_resource type="Texture2D" uid="uid://b2e1pkhlx2nad" path="res://assets/effects/Smoke-Sheet.png" id="1_4g10m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4g10m"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpx7o"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxvkr"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_furjv"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leh6u"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cregh"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(80, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrclo"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(160, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dveoo"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(240, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ac1b"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(0, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsh5i"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(80, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odxhy"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(160, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgdqr"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(240, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3gd4"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(0, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ecfm"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(80, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_516cl"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(160, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_024x6"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(240, 240, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vna1"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(0, 320, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg1ei"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(80, 320, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uicla"]
+atlas = ExtResource("1_4g10m")
+region = Rect2(160, 320, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8o8g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4g10m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpx7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxvkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_furjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_leh6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cregh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrclo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dveoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ac1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsh5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odxhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgdqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3gd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ecfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_516cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_024x6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vna1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg1ei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uicla")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="BlackSmoke" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l8o8g")
+autoplay = "default"
