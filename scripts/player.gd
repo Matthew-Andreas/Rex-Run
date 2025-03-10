@@ -7,12 +7,14 @@ const DAMAGE_TIME = 60
 @onready var timer: Timer = $Timer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_component: HealthComponent = $HealthComponent
+@onready var canvas_layer = $CanvasLayer
 
 var prev_health : float
 var play_damage : bool
 
 func _ready() -> void:
 	prev_health = health_component.health
+	canvas_layer.update_health_label(prev_health)
 
 func _physics_process(delta: float) -> void:
 	# add the gravity
@@ -45,6 +47,7 @@ func _physics_process(delta: float) -> void:
 		play_damage = true
 		animated_sprite.play("damage")
 		prev_health = health_component.health
+		canvas_layer.update_health_label(prev_health)
 		timer.start()
 	
 	# apply movement

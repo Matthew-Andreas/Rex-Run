@@ -6,3 +6,4 @@ class_name HitboxComponent
 func _on_body_entered(body: Node2D) -> void:
 	if body.health_component:
 		body.health_component.damage()
+		

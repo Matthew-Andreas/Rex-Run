@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://b5exh5yuvs64f"]
+[gd_scene load_steps=35 format=4 uid="uid://b5exh5yuvs64f"]
 
 [ext_resource type="PackedScene" uid="uid://bejflugm4dyom" path="res://scenes/parallax_scenes/hills.tscn" id="1_1kice"]
 [ext_resource type="PackedScene" uid="uid://dvkijt6pn8i1e" path="res://scenes/parallax_scenes/desert_mountains_a.tscn" id="1_37s47"]
@@ -17,11 +17,16 @@
 [ext_resource type="PackedScene" uid="uid://bvoodcsmeakia" path="res://scenes/effects_scenes/flamethrower.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://betg0wuk41dpq" path="res://scenes/effects_scenes/gravity.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cn5s348i47fnr" path="res://scenes/effects_scenes/red_sparks.tscn" id="10_rysoc"]
+[ext_resource type="PackedScene" uid="uid://cwam2nbalcuv3" path="res://scenes/objects_scenes/red_mushroom.tscn" id="11_bt5mj"]
+[ext_resource type="PackedScene" uid="uid://qcgqbm6alv3k" path="res://scenes/health_ui.tscn" id="11_qnb83"]
 [ext_resource type="PackedScene" uid="uid://dx4s4s72q22a" path="res://scenes/effects_scenes/smoke.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bw56jgbuddc1p" path="res://scenes/effects_scenes/poison_cloud.tscn" id="16_5newe"]
 [ext_resource type="PackedScene" uid="uid://c2r8aue8nvlwq" path="res://scenes/effects_scenes/black_smoke.tscn" id="16_ca42v"]
 [ext_resource type="PackedScene" uid="uid://co24qmk0f6lek" path="res://scenes/effects_scenes/water_vortex.tscn" id="18_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://mxy5hvfhpl7m" path="res://scenes/parallax_scenes/forest.tscn" id="19_264po"]
+[ext_resource type="PackedScene" uid="uid://bprmgrs8d7y8d" path="res://scenes/objects_scenes/yellow_mushroom.tscn" id="24_e1j6l"]
+[ext_resource type="PackedScene" uid="uid://4tcg4d0i0lo2" path="res://scenes/objects_scenes/purple_mushroom.tscn" id="25_pl11u"]
+[ext_resource type="PackedScene" uid="uid://b4ewwe2ma6wc5" path="res://scenes/objects_scenes/blue_mushroom.tscn" id="26_bhx41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -1926,6 +1931,7 @@ sources/5 = SubResource("TileSetAtlasSource_bhx41")
 [node name="Game" type="Node2D"]
 
 [node name="DesertMountainsA" parent="." instance=ExtResource("1_37s47")]
+visible = false
 position = Vector2(0, 180)
 scale = Vector2(0.25, 0.25)
 
@@ -1934,7 +1940,6 @@ visible = false
 position = Vector2(1, 98)
 
 [node name="Forest" parent="." instance=ExtResource("19_264po")]
-visible = false
 position = Vector2(1, -238)
 
 [node name="DesertMountains" parent="." instance=ExtResource("3_5newe")]
@@ -1948,7 +1953,7 @@ tile_set = SubResource("TileSet_lbhrr")
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(482, 472)
+position = Vector2(479, 455)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -35)
@@ -1957,19 +1962,13 @@ process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Coins" type="Node" parent="."]
+[node name="CanvasLayer" parent="Player" instance=ExtResource("11_qnb83")]
 
-[node name="Coin" parent="Coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(554, 472)
+[node name="Killzone" parent="." instance=ExtResource("8_0tnpc")]
+position = Vector2(322, 620)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(589, 467)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(628, 467)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("3_lnu2h")]
-position = Vector2(660, 472)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_vtaks")
 
 [node name="StaticPlatforms" type="Node" parent="."]
 
@@ -1985,11 +1984,19 @@ position = Vector2(851, 419)
 [node name="StaticPlatform4" parent="StaticPlatforms" instance=ExtResource("6_p57ef")]
 position = Vector2(920, 460)
 
-[node name="Killzone" parent="." instance=ExtResource("8_0tnpc")]
-position = Vector2(322, 620)
+[node name="Coins" type="Node" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_vtaks")
+[node name="Coin" parent="Coins" instance=ExtResource("3_lnu2h")]
+position = Vector2(554, 472)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("3_lnu2h")]
+position = Vector2(580, 472)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("3_lnu2h")]
+position = Vector2(604, 472)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("3_lnu2h")]
+position = Vector2(627, 472)
 
 [node name="Effects" type="Node" parent="."]
 
@@ -2020,3 +2027,17 @@ position = Vector2(1552, 440)
 
 [node name="WaterVortex" parent="Effects" instance=ExtResource("18_ssvqc")]
 position = Vector2(1666, 445)
+
+[node name="Mushrooms" type="Node" parent="."]
+
+[node name="RedMushroom" parent="Mushrooms" instance=ExtResource("11_bt5mj")]
+position = Vector2(705, 419)
+
+[node name="YellowMushroom" parent="Mushrooms" instance=ExtResource("24_e1j6l")]
+position = Vector2(785, 434)
+
+[node name="PurpleMushroom" parent="Mushrooms" instance=ExtResource("25_pl11u")]
+position = Vector2(904, 449)
+
+[node name="BlueMushroom" parent="Mushrooms" instance=ExtResource("26_bhx41")]
+position = Vector2(851, 408)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://qcgqbm6alv3k"]
+
+[ext_resource type="Script" uid="uid://tmx3lyb22im2" path="res://scripts/health_ui.gd" id="1_qckcs"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_qckcs")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 128.0
+offset_bottom = 23.0
+text = "Health: "
