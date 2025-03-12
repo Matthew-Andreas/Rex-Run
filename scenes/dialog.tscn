@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnbtxrrpwu2y5"]
+
+[ext_resource type="FontFile" uid="uid://dwxqiucqib8po" path="res://Assest/fonts/PixelOperator8.ttf" id="1_irs7l"]
+
+[sub_resource type="Gradient" id="Gradient_irs7l"]
+colors = PackedColorArray(0.176471, 0.176471, 0.176471, 1, 0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_edf0l"]
+gradient = SubResource("Gradient_irs7l")
+width = 128
+
+[node name="Dialog" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 32)
+texture = SubResource("GradientTexture2D_edf0l")
+
+[node name="DialogText" type="Label" parent="Sprite2D"]
+offset_left = -60.0
+offset_top = -27.0
+offset_right = 60.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("1_irs7l")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2
