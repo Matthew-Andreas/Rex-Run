@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkt8oxvx7dvxl"]
+
+[ext_resource type="Texture2D" uid="uid://bd76vyd8kgk1a" path="res://assets/characters/dino-blue.png" id="1_vwlfy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sst3"]
+atlas = ExtResource("1_vwlfy")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8v3c"]
+atlas = ExtResource("1_vwlfy")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duayq"]
+atlas = ExtResource("1_vwlfy")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq44t"]
+atlas = ExtResource("1_vwlfy")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6h7vh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sst3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8v3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duayq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq44t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rccsu"]
+size = Vector2(60, 30)
+
+[node name="Base NPC" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6h7vh")
+autoplay = "default"
+frame_progress = 0.80562
+
+[node name="InteractionArea" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/InteractionArea"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_rccsu")
