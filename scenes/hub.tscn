@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://xhokn4oylcw2"]
+[gd_scene load_steps=27 format=4 uid="uid://xhokn4oylcw2"]
 
 [ext_resource type="Script" uid="uid://cxaweorifhoet" path="res://scripts/MainLand.gd" id="1_phvbg"]
 [ext_resource type="Texture2D" uid="uid://cuu4ofx47hhvq" path="res://assets/ground/spring_.png" id="3_lcd1r"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b35xp2ttecyr7" path="res://scenes/ui_scenes/instruction_object.tscn" id="9_qrwm6"]
 [ext_resource type="FontFile" uid="uid://dwxqiucqib8po" path="res://assets/fonts/PixelOperator8.ttf" id="10_0vypl"]
 [ext_resource type="PackedScene" uid="uid://bilvcqsbloc1l" path="res://scenes/ui_scenes/dialog_select_menu.tscn" id="11_fm13a"]
+[ext_resource type="PackedScene" uid="uid://bejflugm4dyom" path="res://scenes/parallax_scenes/hills.tscn" id="11_lcd1r"]
 [ext_resource type="PackedScene" uid="uid://c3v7wk6dh3e11" path="res://scenes/player.tscn" id="12_tmir4"]
 [ext_resource type="PackedScene" uid="uid://qcgqbm6alv3k" path="res://scenes/ui_scenes/health_ui.tscn" id="13_bb8k7"]
 [ext_resource type="PackedScene" uid="uid://b86s8drdhidb5" path="res://scenes/objects_scenes/boat.tscn" id="14_trb2f"]
@@ -490,7 +491,7 @@ collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -35)
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -498,6 +499,10 @@ position_smoothing_enabled = true
 [node name="Boat" parent="." instance=ExtResource("14_trb2f")]
 position = Vector2(1204, 101)
 scale = Vector2(0.5, 0.5)
+
+[node name="Hills" parent="." instance=ExtResource("11_lcd1r")]
+z_index = -5
+position = Vector2(-55, -215)
 
 [connection signal="talkingWithBoatGuy" from="." to="Boat Seller" method="_on_game_talking_with_boat_guy"]
 [connection signal="body_entered" from="Boat Seller/AnimatedSprite2D/InteractionArea" to="Boat Seller" method="_on_interaction_area_body_entered"]

@@ -323,6 +323,7 @@ sources/1 = SubResource("TileSetAtlasSource_utnqw")
 [node name="ExampleLevel" type="Node2D"]
 
 [node name="DesertMountainsA" parent="." instance=ExtResource("1_utnqw")]
+visible = false
 position = Vector2(0, 180)
 scale = Vector2(0.25, 0.25)
 
@@ -331,7 +332,6 @@ visible = false
 position = Vector2(1, 98)
 
 [node name="Forest" parent="." instance=ExtResource("3_fhbyi")]
-visible = false
 position = Vector2(1, -238)
 
 [node name="DesertMountains" parent="." instance=ExtResource("4_6oqef")]
