@@ -13,8 +13,8 @@ func _ready() -> void:
 	changeVisibility($"Boat Seller/DialogBlock",false)
 	player.hub = true
 
-func _on_player_interactwith_npc(name: String) -> void:
-	if name == boatSeller.name:
+func _on_player_interactwith_npc(npm_name: String) -> void:
+	if npm_name == boatSeller.name:
 		talkingWithBoatGuy.emit()
 
 
