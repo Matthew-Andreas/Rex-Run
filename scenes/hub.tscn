@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://xhokn4oylcw2"]
+[gd_scene load_steps=26 format=4 uid="uid://xhokn4oylcw2"]
 
 [ext_resource type="Script" uid="uid://cxaweorifhoet" path="res://scripts/MainLand.gd" id="1_phvbg"]
 [ext_resource type="Texture2D" uid="uid://cuu4ofx47hhvq" path="res://assets/ground/spring_.png" id="3_lcd1r"]
@@ -314,11 +314,39 @@ distance = 2.625
 atlas = ExtResource("6_s6eg2")
 region = Rect2(0, 0, 24, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oyfp"]
+atlas = ExtResource("6_s6eg2")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcd1r"]
+atlas = ExtResource("6_s6eg2")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6eg2"]
+atlas = ExtResource("6_s6eg2")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phvbg"]
+atlas = ExtResource("6_s6eg2")
+region = Rect2(72, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6h7vh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_glsmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oyfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcd1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6eg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phvbg")
 }],
 "loop": true,
 "name": &"default",
@@ -339,8 +367,7 @@ width = 128
 script = ExtResource("1_phvbg")
 
 [node name="FishingHut" type="Sprite2D" parent="."]
-position = Vector2(1165.5, 55)
-scale = Vector2(2, 2)
+position = Vector2(1167, 76)
 texture = SubResource("CompressedTexture2D_4oyfp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="FishingHut"]
@@ -357,18 +384,17 @@ tile_set = SubResource("TileSet_phvbg")
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Edge"]
-position = Vector2(684.5, 28.75)
+position = Vector2(638, 29)
 rotation = -1.5708
 scale = Vector2(2, 2)
 shape = SubResource("WorldBoundaryShape2D_vo17d")
 
 [node name="Boat Seller" type="Node2D" parent="."]
-position = Vector2(1200, 40.5)
+position = Vector2(1183, 68)
 script = ExtResource("7_7n2o6")
 profession = "Boat Seller"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Boat Seller"]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6h7vh")
 autoplay = "default"
 frame_progress = 0.80562
@@ -380,6 +406,7 @@ position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_rccsu")
 
 [node name="DialogBlock" type="Node2D" parent="Boat Seller"]
+scale = Vector2(0.75, 0.75)
 
 [node name="InstructionObject" parent="Boat Seller/DialogBlock" instance=ExtResource("9_qrwm6")]
 position = Vector2(-0.5, -26.5)
@@ -457,7 +484,6 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("12_tmir4")]
 position = Vector2(126.5, 14.5)
-scale = Vector2(2, 2)
 collision_layer = 3
 
 [node name="HealthCanvas" parent="Player" instance=ExtResource("13_bb8k7")]
@@ -470,7 +496,8 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Boat" parent="." instance=ExtResource("14_trb2f")]
-position = Vector2(1232, 91)
+position = Vector2(1204, 101)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="talkingWithBoatGuy" from="." to="Boat Seller" method="_on_game_talking_with_boat_guy"]
 [connection signal="body_entered" from="Boat Seller/AnimatedSprite2D/InteractionArea" to="Boat Seller" method="_on_interaction_area_body_entered"]
