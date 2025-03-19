@@ -35,13 +35,23 @@ func _on_game_talking_with_boat_guy() -> void:
 
 func _on_dialog_select_menu_action_selected(action: String) -> void:
 	if action == "quest":
-		pass
+		questFromBoatGuy()
 	elif action == "talk":
 		talkingWithBoatGuy()
 	else:
 		closeInteraction()
 		
+func questFromBoatGuy():
+	gameNode.changeVisibility(actionSelectMenu,false)
+	gameNode.changeVisibility(dialogPeice,true)
+	if GameManager.boat_guy_quest:
+		dialogText.text = "Thank you for your help. No more quests for now."
+	else:
+		dialogText.text = "Please get me 3 fish for my stew."
 		
+		
+	gameNode.changeVisibility(okBtn,true)
+	
 		
 func talkingWithBoatGuy():
 	gameNode.changeVisibility(actionSelectMenu,false)
