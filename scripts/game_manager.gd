@@ -1,5 +1,6 @@
 extends Node
 
+var boat_guy_quest = false
 var current_scene = null
 
 func _ready():
