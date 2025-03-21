@@ -16,6 +16,7 @@ const DAMAGE_TIME = 60
 @export var playerName = "Tom"
 var nextToBoatGuy = false
 var nextToChef = false
+var nextToShopKeeper = false
 var hub = false
 var prev_health : float
 var play_damage : bool
@@ -73,6 +74,8 @@ func _physics_process(delta: float) -> void:
 		interactwithNPC.emit("Boat Seller")
 	elif nextToChef and Input.is_action_just_pressed("interact"):
 		interactwithNPC.emit("Chef")
+	elif nextToShopKeeper and Input.is_action_just_pressed("interact"):
+		interactwithNPC.emit("Shop Keeper")
 	
 	# Changes scences by pressing 'M' key
 	if Input.is_action_just_pressed("temp_Scene_Switch"):

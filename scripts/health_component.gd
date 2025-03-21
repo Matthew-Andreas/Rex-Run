@@ -9,7 +9,7 @@ func _ready() -> void:
 	
 
 func damage():
-	health -= 1
+	health -= 1 * GameManager.damage_mutiplier
 	print("Player took damage. Health: " + str(health))
 	
 	if health <= 0:
