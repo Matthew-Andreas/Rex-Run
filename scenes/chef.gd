@@ -11,7 +11,7 @@ extends Node2D
 @onready var yesAndNoBTN = $DialogBlock/DialogButtons1
 @onready var okBtn = $DialogBlock/DialogButtons2
 @onready var actionSelectMenu = $DialogBlock/DialogSelectMenu
-@onready var dialogText = $DialogBlock/Dialog/Sprite2D/DialogText
+@onready var dialogText = $DialogBlock/Dialog/DialogText
 var player
 
 func _on_interaction_area_body_entered(body: Node2D) -> void:
@@ -44,10 +44,10 @@ func _on_dialog_select_menu_action_selected(action: String) -> void:
 func questFromNPC():
 	gameNode.changeVisibility(actionSelectMenu,false)
 	gameNode.changeVisibility(dialogPeice,true)
-	if GameManager.boat_guy_quest:
+	if GameManager.chef_quest:
 		dialogText.text = "Thank you for your help. No more quests for now."
 	else:
-		dialogText.text = "Please get me 3 fish for my stew."
+		dialogText.text = "Please get me 5 mushrooms for my signature mushroom and chicken dish."
 		
 		
 	gameNode.changeVisibility(okBtn,true)
@@ -56,11 +56,11 @@ func questFromNPC():
 func talkingWithNPC():
 	gameNode.changeVisibility(actionSelectMenu,false)
 	gameNode.changeVisibility(dialogPeice,true)
-	if gameNode.boatOwned:
-		dialogText.text = "Go to the end of the dock to get in the boat."
+	if not GameManager.chef_quest:
+		dialogText.text = "Complete my quest to unlock recipe."
 		gameNode.changeVisibility(okBtn,true)
 	else:
-		dialogText.text = "Hello "+ player.playerName+", would you like to buy a boat for $500?"
+		dialogText.text = "Hello "+ player.playerName+", would you like to buy my signature mushroom and chicken dish for $50?(+10HP)"
 		gameNode.changeVisibility(yesAndNoBTN,true)
 		 
 	
@@ -71,7 +71,7 @@ func closeInteraction():
 
 
 func _on_yes_pressed() -> void:
-	if GameManager.player_money >= 500:
+	if GameManager.player_money >= 50:
 		dialogText.text = "Ok, here is the key. Go to the end of the dock to get in the boat."
 		gameNode.boatOwned = true
 	else:

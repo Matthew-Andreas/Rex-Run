@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://xhokn4oylcw2"]
+[gd_scene load_steps=41 format=4 uid="uid://xhokn4oylcw2"]
 
 [ext_resource type="Script" uid="uid://cxaweorifhoet" path="res://scripts/MainLand.gd" id="1_phvbg"]
 [ext_resource type="Texture2D" uid="uid://w85ddgnjghi2" path="res://assets/boat_stuff/Fishing_hut.png" id="2_glsmu"]
@@ -15,6 +15,10 @@
 [ext_resource type="Script" uid="uid://c0guoynmqx6kl" path="res://scenes/chef.gd" id="14_3q32m"]
 [ext_resource type="Texture2D" uid="uid://ds15lkoa3d5w6" path="res://assets/characters/dino-red.png" id="14_phvbg"]
 [ext_resource type="PackedScene" uid="uid://b86s8drdhidb5" path="res://scenes/objects_scenes/boat.tscn" id="14_trb2f"]
+[ext_resource type="Texture2D" uid="uid://dl00j8p3pr6mp" path="res://assets/boat_stuff/Fishbarrel3.png" id="16_7t3s2"]
+[ext_resource type="Texture2D" uid="uid://dm1ma4ly3tkgl" path="res://assets/boat_stuff/Fishbarrel1.png" id="17_7n2o6"]
+[ext_resource type="Texture2D" uid="uid://csofmpw2i6pjw" path="res://assets/objects/fruit.png" id="18_rtbv5"]
+[ext_resource type="Texture2D" uid="uid://c47g1q0mn57ku" path="res://assets/objects/items_.png" id="19_qrwm6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3q32m"]
 texture = ExtResource("3_glsmu")
@@ -719,6 +723,7 @@ position = Vector2(1204, 101)
 scale = Vector2(0.5, 0.5)
 
 [node name="Chef" type="Node2D" parent="."]
+z_index = -1
 position = Vector2(634, 87)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("14_3q32m")
@@ -747,14 +752,18 @@ position = Vector2(-0.5, -26.5)
 position = Vector2(-63.5, -84.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Chef/DialogBlock/Dialog"]
-position = Vector2(64, 32)
+position = Vector2(64.5, 15.25)
+scale = Vector2(1.04687, 1.52344)
 texture = SubResource("GradientTexture2D_edf0l")
 
-[node name="DialogText" type="Label" parent="Chef/DialogBlock/Dialog/Sprite2D"]
-offset_left = -63.0
-offset_top = -27.0
-offset_right = 63.0
-offset_bottom = 20.0
+[node name="DialogText" type="Label" parent="Chef/DialogBlock/Dialog"]
+anchors_preset = -1
+anchor_top = -0.226273
+anchor_bottom = -0.210648
+offset_left = 1.5
+offset_top = -29.5
+offset_right = 127.5
+offset_bottom = 17.5
 theme_override_fonts/font = ExtResource("10_0vypl")
 theme_override_font_sizes/font_size = 8
 autowrap_mode = 2
@@ -814,6 +823,66 @@ metadata/_edit_use_anchors_ = true
 [node name="DialogSelectMenu" parent="Chef/DialogBlock" instance=ExtResource("11_fm13a")]
 position = Vector2(-38, -154)
 scale = Vector2(0.75, 0.75)
+
+[node name="Fishbarrel3" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(580, 87)
+texture = ExtResource("16_7t3s2")
+
+[node name="Fishbarrel1" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(597, 91)
+texture = ExtResource("17_7n2o6")
+
+[node name="Fishbarrel2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(669, 91)
+texture = ExtResource("17_7n2o6")
+
+[node name="Fishbarrel4" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(651, 87)
+texture = ExtResource("16_7t3s2")
+
+[node name="Fishbarrel5" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(614, 87)
+texture = ExtResource("16_7t3s2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(579, 71)
+texture = ExtResource("18_rtbv5")
+region_enabled = true
+region_rect = Rect2(34, 1, 11, 15)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(597, 80)
+texture = ExtResource("18_rtbv5")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(669, 79)
+texture = ExtResource("18_rtbv5")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(651, 73)
+texture = ExtResource("19_qrwm6")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(614, 73)
+texture = ExtResource("19_qrwm6")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
 
 [connection signal="talkingWithBoatGuy" from="." to="Boat Seller" method="_on_game_talking_with_boat_guy"]
 [connection signal="talkingWithChef" from="." to="Chef" method="_on_game_talking_with_chef"]

@@ -1,7 +1,7 @@
 extends Node
 
 var boat_guy_quest = false
-var chef_quest = false
+var chef_quest = true
 var current_scene = null
 var player_money = 20
 
