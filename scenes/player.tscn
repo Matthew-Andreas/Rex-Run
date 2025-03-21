@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c7pf7cbfxvrg" path="res://assets/characters/dino-green.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b0ex2wbmc8sn" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="PackedScene" uid="uid://bde4pukuh12ho" path="res://scenes/component_scenes/health_component.tscn" id="3_qhqgy"]
-[ext_resource type="Script" uid="uid://cq7c80yqrly4h" path="res://scenes/money_component.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://cq7c80yqrly4h" path="res://scripts/money_component.gd" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
 atlas = ExtResource("1_3vyb7")

@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://4tcg4d0i0lo2" path="res://scenes/objects_scenes/purple_mushroom.tscn" id="26_y7u7g"]
 [ext_resource type="PackedScene" uid="uid://b4ewwe2ma6wc5" path="res://scenes/objects_scenes/blue_mushroom.tscn" id="27_3i0ja"]
 [ext_resource type="PackedScene" uid="uid://bd34y6ar4m173" path="res://scenes/move_to_hub.tscn" id="27_utnqw"]
-[ext_resource type="PackedScene" uid="uid://dmq5gvj375l43" path="res://scenes/level_select.tscn" id="28_6ifc1"]
+[ext_resource type="PackedScene" uid="uid://dmq5gvj375l43" path="res://scenes/ui_scenes/level_select.tscn" id="28_6ifc1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ifc1"]
 texture = ExtResource("5_huqwn")

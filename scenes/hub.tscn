@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://c47g1q0mn57ku" path="res://assets/objects/items_.png" id="19_qrwm6"]
 [ext_resource type="Script" uid="uid://bj118plaflc4q" path="res://scripts/shop_keeper.gd" id="20_rtbv5"]
 [ext_resource type="Texture2D" uid="uid://dsocykj1vdgr2" path="res://assets/characters/dino-yellow.png" id="21_qrwm6"]
-[ext_resource type="PackedScene" uid="uid://dmq5gvj375l43" path="res://scenes/level_select.tscn" id="22_qrwm6"]
+[ext_resource type="PackedScene" uid="uid://dmq5gvj375l43" path="res://scenes/ui_scenes/level_select.tscn" id="22_qrwm6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3q32m"]
 texture = ExtResource("3_glsmu")
