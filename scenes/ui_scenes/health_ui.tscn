@@ -5,7 +5,12 @@
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_qckcs")
 
-[node name="Label" type="Label" parent="."]
+[node name="Health" type="Label" parent="."]
 offset_right = 128.0
 offset_bottom = 23.0
 text = "Health: "
+
+[node name="Money" type="Label" parent="."]
+offset_top = 21.0
+offset_right = 85.0
+offset_bottom = 44.0

@@ -1,14 +1,15 @@
 extends Node2D
 class_name HealthComponent
 
-@export var MAX_HEALTH := 10.0
+#@export var MAX_HEALTH := 10.0
 var health : float
 
 func _ready() -> void:
-	health = MAX_HEALTH
+	health = GameManager.player_current_Health_cap
+	
 
 func damage():
-	health -= 1
+	health -= 1 * GameManager.damage_mutiplier
 	print("Player took damage. Health: " + str(health))
 	
 	if health <= 0:

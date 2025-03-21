@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://c3v7wk6dh3e11"]
+[gd_scene load_steps=21 format=3 uid="uid://c3v7wk6dh3e11"]
 
 [ext_resource type="Texture2D" uid="uid://c7pf7cbfxvrg" path="res://assets/characters/dino-green.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b0ex2wbmc8sn" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="PackedScene" uid="uid://bde4pukuh12ho" path="res://scenes/component_scenes/health_component.tscn" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://cq7c80yqrly4h" path="res://scenes/money_component.gd" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
 atlas = ExtResource("1_3vyb7")
@@ -147,5 +148,8 @@ position = Vector2(0, -10)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="MoneyComponent" type="Node2D" parent="."]
+script = ExtResource("4_dqkch")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
