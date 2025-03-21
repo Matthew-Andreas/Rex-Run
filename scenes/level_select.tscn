@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmq5gvj375l43"]
+
+[ext_resource type="Script" uid="uid://bcirp4mg1nk3u" path="res://scripts/level_select.gd" id="1_2epne"]
+[ext_resource type="Texture2D" uid="uid://eg0yyte66em5" path="res://assets/objects/staticObjects_.png" id="2_rif6e"]
+[ext_resource type="FontFile" uid="uid://dwxqiucqib8po" path="res://assets/fonts/PixelOperator8.ttf" id="3_chg43"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r77uv"]
+size = Vector2(30, 19)
+
+[sub_resource type="Gradient" id="Gradient_g53wv"]
+colors = PackedColorArray(0.176471, 0.176471, 0.176471, 1, 0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j1h4b"]
+gradient = SubResource("Gradient_g53wv")
+width = 100
+height = 160
+
+[node name="LevelSelect" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_2epne")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rif6e")
+region_enabled = true
+region_rect = Rect2(17, 99, 14, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_r77uv")
+
+[node name="DialogSelectMenu" type="Node2D" parent="."]
+position = Vector2(-49, -174)
+
+[node name="Background" type="Sprite2D" parent="DialogSelectMenu"]
+position = Vector2(49, 134.565)
+scale = Vector2(0.76, 0.257059)
+texture = SubResource("GradientTexture2D_j1h4b")
+
+[node name="Level_1" type="Button" parent="DialogSelectMenu"]
+offset_left = 20.0
+offset_top = 119.565
+offset_right = 80.0
+offset_bottom = 150.565
+scale = Vector2(0.385413, 0.385413)
+theme_override_fonts/font = ExtResource("3_chg43")
+theme_override_font_sizes/font_size = 8
+text = "Level 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level_2" type="Button" parent="DialogSelectMenu"]
+offset_left = 54.0
+offset_top = 119.565
+offset_right = 114.0
+offset_bottom = 150.565
+scale = Vector2(0.385413, 0.385413)
+theme_override_fonts/font = ExtResource("3_chg43")
+theme_override_font_sizes/font_size = 8
+text = "Level 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level_3" type="Button" parent="DialogSelectMenu"]
+offset_left = 20.0
+offset_top = 137.565
+offset_right = 80.0
+offset_bottom = 168.565
+scale = Vector2(0.385413, 0.385413)
+theme_override_fonts/font = ExtResource("3_chg43")
+theme_override_font_sizes/font_size = 8
+text = "Level 3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level_4" type="Button" parent="DialogSelectMenu"]
+offset_left = 54.0
+offset_top = 138.0
+offset_right = 114.0
+offset_bottom = 169.0
+scale = Vector2(0.385413, 0.385413)
+theme_override_fonts/font = ExtResource("3_chg43")
+theme_override_font_sizes/font_size = 8
+text = "Level 4"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="DialogSelectMenu/Level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="DialogSelectMenu/Level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="DialogSelectMenu/Level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="DialogSelectMenu/Level_4" to="." method="_on_level_4_pressed"]

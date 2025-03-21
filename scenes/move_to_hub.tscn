@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd34y6ar4m173"]
+
+[ext_resource type="Script" uid="uid://v7sdguphux81" path="res://scripts/move_to_hub.gd" id="1_v55ow"]
+
+[node name="MoveToHub" type="Area2D"]
+script = ExtResource("1_v55ow")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

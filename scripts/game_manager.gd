@@ -18,3 +18,6 @@ func _ready():
 
 func restart_on_death():
 	get_tree().call_deferred("reload_current_scene")
+
+func load_level(level_path):
+	get_tree().call_deferred("change_scene_to_file", level_path)
