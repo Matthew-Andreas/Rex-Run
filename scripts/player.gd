@@ -9,6 +9,7 @@ const DAMAGE_TIME = 60
 @onready var timer: Timer = $Timer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var health_component: HealthComponent = $HealthComponent
+@onready var money_component: MoneyComponent = $MoneyComponent
 @onready var health_canvas = $HealthCanvas
 
 
