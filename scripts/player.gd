@@ -3,9 +3,7 @@ extends CharacterBody2D
 signal interactwithNPC(name:String)
 
 const SPEED = 120.0
-const BIG_SPEED = 460.0
 const JUMP_VELOCITY = -300.0
-const BIG_JUMP_VELOCITY = -700.0
 const DAMAGE_TIME = 60
 
 @onready var timer: Timer = $Timer
@@ -15,8 +13,8 @@ const DAMAGE_TIME = 60
 
 
 @export var playerName = "Tom"
-@export var money = 20
 var nextToBoatGuy = false
+var nextToChef = false
 var hub = false
 var prev_health : float
 var play_damage : bool
@@ -72,6 +70,8 @@ func _physics_process(delta: float) -> void:
 	
 	if nextToBoatGuy and Input.is_action_just_pressed("interact"):
 		interactwithNPC.emit("Boat Seller")
+	elif nextToChef and Input.is_action_just_pressed("interact"):
+		interactwithNPC.emit("Chef")
 	
 	# Changes scences by pressing 'M' key
 	if Input.is_action_just_pressed("temp_Scene_Switch"):

@@ -1,7 +1,9 @@
 extends Node
 
 var boat_guy_quest = false
+var chef_quest = false
 var current_scene = null
+var player_money = 20
 
 func _ready():
 	var root = get_tree().root

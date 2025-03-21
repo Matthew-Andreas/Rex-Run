@@ -722,8 +722,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(634, 87)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("14_3q32m")
-sellerName = "Billy"
-profession = "Chef"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chef"]
 scale = Vector2(2, 2)
@@ -738,7 +736,7 @@ position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_7n2o6")
 
 [node name="DialogBlock" type="Node2D" parent="Chef"]
-position = Vector2(0, -4)
+scale = Vector2(0.75, 0.75)
 
 [node name="InstructionObject" parent="Chef/DialogBlock" instance=ExtResource("9_qrwm6")]
 position = Vector2(-0.5, -26.5)
@@ -812,11 +810,10 @@ text = "Ok"
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogSelectMenu" parent="Chef/DialogBlock" instance=ExtResource("11_fm13a")]
-position = Vector2(-38, -154)
-scale = Vector2(0.75, 0.75)
+position = Vector2(-25, -108.5)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="talkingWithBoatGuy" from="." to="Boat Seller" method="_on_game_talking_with_boat_guy"]
-[connection signal="talkingWithChef" from="." to="Chef" method="_on_game_talking_with_chef"]
 [connection signal="body_entered" from="Boat Seller/AnimatedSprite2D/InteractionArea" to="Boat Seller" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Boat Seller/AnimatedSprite2D/InteractionArea" to="Boat Seller" method="_on_interaction_area_body_exited"]
 [connection signal="pressed" from="Boat Seller/DialogBlock/DialogButtons1/Yes" to="Boat Seller" method="_on_yes_pressed"]
@@ -824,9 +821,7 @@ scale = Vector2(0.75, 0.75)
 [connection signal="pressed" from="Boat Seller/DialogBlock/DialogButtons2/Ok" to="Boat Seller" method="_on_ok_pressed"]
 [connection signal="actionSelected" from="Boat Seller/DialogBlock/DialogSelectMenu" to="Boat Seller" method="_on_dialog_select_menu_action_selected"]
 [connection signal="interactwithNPC" from="Player" to="." method="_on_player_interactwith_npc"]
-[connection signal="body_entered" from="Chef/AnimatedSprite2D/InteractionArea" to="Chef" method="_on_interaction_area_body_entered"]
-[connection signal="body_exited" from="Chef/AnimatedSprite2D/InteractionArea" to="Chef" method="_on_interaction_area_body_exited"]
-[connection signal="pressed" from="Chef/DialogBlock/DialogButtons1/Yes" to="Chef" method="_on_yes_pressed"]
-[connection signal="pressed" from="Chef/DialogBlock/DialogButtons1/No" to="Chef" method="_on_no_pressed"]
-[connection signal="pressed" from="Chef/DialogBlock/DialogButtons2/Ok" to="Chef" method="_on_ok_pressed"]
-[connection signal="actionSelected" from="Chef/DialogBlock/DialogSelectMenu" to="Chef" method="_on_dialog_select_menu_action_selected"]
+[connection signal="pressed" from="Chef/DialogBlock/DialogButtons1/Yes" to="Boat Seller" method="_on_yes_pressed"]
+[connection signal="pressed" from="Chef/DialogBlock/DialogButtons1/No" to="Boat Seller" method="_on_no_pressed"]
+[connection signal="pressed" from="Chef/DialogBlock/DialogButtons2/Ok" to="Boat Seller" method="_on_ok_pressed"]
+[connection signal="actionSelected" from="Chef/DialogBlock/DialogSelectMenu" to="Boat Seller" method="_on_dialog_select_menu_action_selected"]

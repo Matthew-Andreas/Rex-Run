@@ -1,4 +1,4 @@
-class_name basicNPC2
+class_name basicNPC
 
 extends Node2D
 
@@ -17,31 +17,31 @@ var player
 func _on_interaction_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
-		body.nextToBoatGuy = true
+		body.nextToChef = true
 		dialogComponet.visible = true
 		gameNode.changeVisibility(instructionText,true)
 		
 func _on_interaction_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		body.nextToBoatGuy = false
+		body.nextToChef = false
 		gameNode.changeVisibility(dialogComponet,false)
 		
 
 
-func _on_game_talking_with_boat_guy() -> void:
+func _on_game_talking_with_chef() -> void:
 	gameNode.changeVisibility(actionSelectMenu,true)
 	gameNode.changeVisibility(instructionText,false)
 
 
 func _on_dialog_select_menu_action_selected(action: String) -> void:
 	if action == "quest":
-		questFromBoatGuy()
+		questFromNPC()
 	elif action == "talk":
-		talkingWithBoatGuy()
+		talkingWithNPC()
 	else:
 		closeInteraction()
 		
-func questFromBoatGuy():
+func questFromNPC():
 	gameNode.changeVisibility(actionSelectMenu,false)
 	gameNode.changeVisibility(dialogPeice,true)
 	if GameManager.boat_guy_quest:
@@ -53,7 +53,7 @@ func questFromBoatGuy():
 	gameNode.changeVisibility(okBtn,true)
 	
 		
-func talkingWithBoatGuy():
+func talkingWithNPC():
 	gameNode.changeVisibility(actionSelectMenu,false)
 	gameNode.changeVisibility(dialogPeice,true)
 	if gameNode.boatOwned:
