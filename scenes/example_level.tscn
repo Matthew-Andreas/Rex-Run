@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b633q8msgdkw2" path="res://assets/boat_stuff/Water.png" id="6_cb63a"]
 [ext_resource type="PackedScene" uid="uid://qcgqbm6alv3k" path="res://scenes/ui_scenes/health_ui.tscn" id="8_cb63a"]
 [ext_resource type="PackedScene" uid="uid://c3v7wk6dh3e11" path="res://scenes/player.tscn" id="10_n4qgs"]
-[ext_resource type="PackedScene" uid="uid://dw7i5shafffxl" path="res://scenes/component_scenes/killzone.tscn" id="12_e7en1"]
+[ext_resource type="PackedScene" uid="uid://dw7i5shafffxl" path="res://scenes/killzone.tscn" id="12_e7en1"]
 [ext_resource type="PackedScene" uid="uid://dwieu3dkimk51" path="res://scenes/objects_scenes/coin.tscn" id="14_pr4pm"]
 [ext_resource type="PackedScene" uid="uid://cn5s348i47fnr" path="res://scenes/effects_scenes/red_sparks.tscn" id="15_1ug6f"]
 [ext_resource type="PackedScene" uid="uid://bq6yo1x16uf5w" path="res://scenes/effects_scenes/electric.tscn" id="16_jwiui"]
