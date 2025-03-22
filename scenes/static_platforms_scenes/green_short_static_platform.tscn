@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://4xml4k3bhq4g"]
+
+[ext_resource type="Texture2D" uid="uid://bj63568rp04n3" path="res://assets/objects/platforms.png" id="1_wgiwt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfbi"]
+size = Vector2(16, 9.375)
+
+[node name="GreenShortStaticPlatform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wgiwt")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ypfbi")
+one_way_collision = true

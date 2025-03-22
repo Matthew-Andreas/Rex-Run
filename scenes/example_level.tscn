@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://b5exh5yuvs64f"]
+[gd_scene load_steps=34 format=4 uid="uid://b5exh5yuvs64f"]
 
 [ext_resource type="PackedScene" uid="uid://dvkijt6pn8i1e" path="res://scenes/parallax_scenes/desert_mountains_a.tscn" id="1_utnqw"]
 [ext_resource type="PackedScene" uid="uid://bejflugm4dyom" path="res://scenes/parallax_scenes/hills.tscn" id="2_6ifc1"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://qcgqbm6alv3k" path="res://scenes/ui_scenes/health_ui.tscn" id="8_cb63a"]
 [ext_resource type="PackedScene" uid="uid://c3v7wk6dh3e11" path="res://scenes/player.tscn" id="10_n4qgs"]
 [ext_resource type="PackedScene" uid="uid://dw7i5shafffxl" path="res://scenes/component_scenes/killzone.tscn" id="12_e7en1"]
-[ext_resource type="PackedScene" uid="uid://cxhwxw5bg7imy" path="res://scenes/static_platforms_scenes/static_platform.tscn" id="13_sr1eg"]
 [ext_resource type="PackedScene" uid="uid://dwieu3dkimk51" path="res://scenes/objects_scenes/coin.tscn" id="14_pr4pm"]
 [ext_resource type="PackedScene" uid="uid://cn5s348i47fnr" path="res://scenes/effects_scenes/red_sparks.tscn" id="15_1ug6f"]
 [ext_resource type="PackedScene" uid="uid://bq6yo1x16uf5w" path="res://scenes/effects_scenes/electric.tscn" id="16_jwiui"]
@@ -531,20 +530,6 @@ position = Vector2(317, 727)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_6ifc1")
-
-[node name="StaticPlatforms" type="Node" parent="."]
-
-[node name="StaticPlatform" parent="StaticPlatforms" instance=ExtResource("13_sr1eg")]
-position = Vector2(705, 431)
-
-[node name="StaticPlatform2" parent="StaticPlatforms" instance=ExtResource("13_sr1eg")]
-position = Vector2(784, 445)
-
-[node name="StaticPlatform3" parent="StaticPlatforms" instance=ExtResource("13_sr1eg")]
-position = Vector2(851, 419)
-
-[node name="StaticPlatform4" parent="StaticPlatforms" instance=ExtResource("13_sr1eg")]
-position = Vector2(920, 460)
 
 [node name="Coins" type="Node" parent="."]
 
