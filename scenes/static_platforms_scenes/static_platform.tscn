@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxhwxw5bg7imy"]
 
-[ext_resource type="Texture2D" uid="uid://cuu4ofx47hhvq" path="res://assets/ground/spring_.png" id="1_lb1nn"]
+[ext_resource type="Texture2D" uid="uid://bj63568rp04n3" path="res://assets/objects/platforms.png" id="1_3wpv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfbi"]
-size = Vector2(48, 8.5)
+size = Vector2(32, 8.5)
 
 [node name="StaticPlatform" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_lb1nn")
+texture = ExtResource("1_3wpv4")
 region_enabled = true
-region_rect = Rect2(0, 247, 48, 9)
+region_rect = Rect2(16, 48, 32, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.25)

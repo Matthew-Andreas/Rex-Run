@@ -192,7 +192,7 @@ texture = ExtResource("5_huqwn")
 6:19/0 = 0
 7:19/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utnqw"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhbyi"]
 texture = ExtResource("5_tx0y1")
 0:0/0 = 0
 1:0/0 = 0
@@ -444,7 +444,7 @@ texture = ExtResource("5_tx0y1")
 4:19/0 = 0
 5:19/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huqwn"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oqef"]
 texture = ExtResource("6_cb63a")
 0:0/0 = 0
 1:0/0 = 0
@@ -479,8 +479,8 @@ texture = ExtResource("6_cb63a")
 
 [sub_resource type="TileSet" id="TileSet_utnqw"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_utnqw")
-sources/2 = SubResource("TileSetAtlasSource_huqwn")
+sources/1 = SubResource("TileSetAtlasSource_fhbyi")
+sources/2 = SubResource("TileSetAtlasSource_6oqef")
 sources/0 = SubResource("TileSetAtlasSource_6ifc1")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6ifc1"]
@@ -500,6 +500,7 @@ visible = false
 position = Vector2(1, 98)
 
 [node name="Forest" parent="." instance=ExtResource("3_fhbyi")]
+visible = false
 position = Vector2(1, -238)
 
 [node name="DesertMountains" parent="." instance=ExtResource("4_6oqef")]

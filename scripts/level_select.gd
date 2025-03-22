@@ -15,7 +15,7 @@ func _on_body_exited(body: Node2D) -> void:
 		dialog_select_menu.visible = false
 
 func _on_level_1_pressed() -> void:
-	GameManager.load_level("res://scenes/example_level.tscn")
+	GameManager.load_level("res://scenes/level_scenes/level_1.tscn")
 
 
 func _on_level_2_pressed() -> void:
