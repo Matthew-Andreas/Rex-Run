@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bj63568rp04n3" path="res://assets/objects/platforms.png" id="1_3s5gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfbi"]
-size = Vector2(34, 8.5)
+size = Vector2(32, 8.5)
 
 [node name="GreenStaticPlatform" type="StaticBody2D"]
 

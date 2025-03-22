@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://tk1fljhpm74s"]
+[gd_scene load_steps=6 format=3 uid="uid://bsh6o0wg3ebju"]
 
-[ext_resource type="Texture2D" uid="uid://bj63568rp04n3" path="res://assets/objects/platforms.png" id="1_an8t1"]
+[ext_resource type="Texture2D" uid="uid://bj63568rp04n3" path="res://assets/objects/platforms.png" id="1_13isb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfbi"]
-size = Vector2(32, 8.5)
+size = Vector2(16, 9.375)
 
 [sub_resource type="Animation" id="Animation_poxas"]
 length = 0.001
@@ -67,15 +67,14 @@ _data = {
 &"spin": SubResource("Animation_ku2n4")
 }
 
-[node name="GreenSpinningPlatform" type="StaticBody2D"]
+[node name="GreenShortSpinningPlatform" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_an8t1")
+texture = ExtResource("1_13isb")
 region_enabled = true
-region_rect = Rect2(16, 0, 32, 9)
+region_rect = Rect2(0, 0, 16, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_ypfbi")
 one_way_collision = true
 
