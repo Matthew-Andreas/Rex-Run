@@ -7,6 +7,7 @@ var SK_item1_owned = false
 var SK_item2_owned = false
 var current_scene = null
 var player_money = 300
+var level_earned_money = 0
 var player_current_Health_cap := 10.0
 var damage_mutiplier := 2
 var coin_multiplier := 1
@@ -18,6 +19,9 @@ func _ready():
 
 func restart_on_death():
 	get_tree().call_deferred("reload_current_scene")
+	player_money -= level_earned_money 
+	level_earned_money = 0
 
 func load_level(level_path):
 	get_tree().call_deferred("change_scene_to_file", level_path)
+	level_earned_money = 0
