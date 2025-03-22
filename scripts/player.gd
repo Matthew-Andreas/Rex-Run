@@ -76,14 +76,6 @@ func _physics_process(delta: float) -> void:
 		interactwithNPC.emit("Chef")
 	elif nextToShopKeeper and Input.is_action_just_pressed("interact"):
 		interactwithNPC.emit("Shop Keeper")
-	
-	# Changes scences by pressing 'M' key
-	if Input.is_action_just_pressed("temp_Scene_Switch"):
-		if not hub:
-			get_tree().change_scene_to_file("res://scenes/hub.tscn")
-		else:
-			get_tree().change_scene_to_file("res://scenes/example_level.tscn")
-
 
 func _on_timer_timeout() -> void:
 	play_damage = false
