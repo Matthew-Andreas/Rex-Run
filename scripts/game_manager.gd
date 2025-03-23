@@ -1,11 +1,14 @@
 extends Node
 
 var boat_guy_quest = false
-var chef_quest = true
-var shop_keeper_quest = true
+var chef_quest = false
+var shop_keeper_quest = false
 var SK_item1_owned = false
 var SK_item2_owned = false
 var current_scene = null
+var mushrooms_collected = 0
+var ballons_collected = 0
+var fish_collected = 0
 var player_money = 300
 var level_earned_money = 0
 var player_current_Health_cap := 10.0
@@ -25,3 +28,22 @@ func restart_on_death():
 func load_level(level_path):
 	get_tree().call_deferred("change_scene_to_file", level_path)
 	level_earned_money = 0
+	
+func quest_item_collected(item):
+	if("Mushroom" == item):
+		mushrooms_collected += 1
+		print(mushrooms_collected)
+		if(mushrooms_collected == 5):
+			chef_quest = true
+	elif("balloon" == item):
+		ballons_collected += 1
+		print(ballons_collected)
+		if(ballons_collected == 4):
+			shop_keeper_quest = true
+	elif("fish" == item):
+		fish_collected +=1
+		print(fish_collected)
+		if(fish_collected == 3):
+			boat_guy_quest =true		
+	
+	pass

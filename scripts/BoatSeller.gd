@@ -56,12 +56,16 @@ func questFromBoatGuy():
 func talkingWithBoatGuy():
 	gameNode.changeVisibility(actionSelectMenu,false)
 	gameNode.changeVisibility(dialogPeice,true)
-	if gameNode.boatOwned:
-		dialogText.text = "Go to the end of the dock to get in the boat."
+	if not GameManager.boat_guy_quest:
+		dialogText.text = "Complete my quest to unlock items."
 		gameNode.changeVisibility(okBtn,true)
-	else:
-		dialogText.text = "Hello "+ player.playerName+", would you like to buy a boat for $500?"
-		gameNode.changeVisibility(yesAndNoBTN,true)
+	else: 
+		if gameNode.boatOwned:
+			dialogText.text = "Go to the end of the dock to get in the boat."
+			gameNode.changeVisibility(okBtn,true)
+		else:
+			dialogText.text = "Hello "+ player.playerName+", would you like to buy a boat for $500?"
+			gameNode.changeVisibility(yesAndNoBTN,true)
 		 
 	
 func closeInteraction():
