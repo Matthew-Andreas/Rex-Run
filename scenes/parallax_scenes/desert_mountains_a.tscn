@@ -14,6 +14,7 @@ scale = Vector2(5, 5)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer1"]
+position = Vector2(-15.4, -21)
 texture = ExtResource("1_s2m65")
 centered = false
 
@@ -41,6 +42,7 @@ repeat_size = Vector2(144, 0)
 repeat_times = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Layer4"]
+position = Vector2(-2.8, -3)
 texture = ExtResource("4_wb4w8")
 centered = false
 
