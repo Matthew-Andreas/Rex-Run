@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bejflugm4dyom"]
+[gd_scene load_steps=8 format=3 uid="uid://bejflugm4dyom"]
 
 [ext_resource type="Texture2D" uid="uid://bgns7g6kfk2m3" path="res://assets/parallax/hills/Hills Layer 01.png" id="1_mvbpv"]
 [ext_resource type="Texture2D" uid="uid://iajpoy3exhqf" path="res://assets/parallax/hills/Hills Layer 02.png" id="2_1j3yp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://brh2pg0mwxe6c" path="res://assets/parallax/hills/Hills Layer 04.png" id="4_o55wp"]
 [ext_resource type="Texture2D" uid="uid://ct0jyafoqv3fw" path="res://assets/parallax/hills/Hills Layer 05.png" id="5_ueye1"]
 [ext_resource type="Texture2D" uid="uid://b8mtipsfdwc4f" path="res://assets/parallax/hills/Hills Layer 06.png" id="6_jwhk7"]
+[ext_resource type="Texture2D" uid="uid://cpvu0xohb55l" path="res://assets/parallax/desert_mountains/cloud3.png" id="7_1j3yp"]
 
 [node name="Hills" type="Node2D"]
 
@@ -61,3 +62,20 @@ repeat_size = Vector2(512, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Layer6"]
 texture = ExtResource("6_jwhk7")
 centered = false
+
+[node name="Layer7" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Layer7"]
+position = Vector2(279.75, 113)
+scale = Vector2(2.37273, 1.5)
+texture = ExtResource("7_1j3yp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Layer7"]
+position = Vector2(279.75, 113)
+scale = Vector2(2.37273, 1.5)
+texture = ExtResource("7_1j3yp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Layer7"]
+position = Vector2(279.75, 113)
+scale = Vector2(2.37273, 1.5)
+texture = ExtResource("7_1j3yp")
