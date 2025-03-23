@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://kn71xmtjxi12"]
+[gd_scene load_steps=38 format=4 uid="uid://kn71xmtjxi12"]
 
 [ext_resource type="PackedScene" uid="uid://byq0fe6ubb4tf" path="res://scenes/parallax_scenes/desert_mountains.tscn" id="1_6ci25"]
 [ext_resource type="Texture2D" uid="uid://d31tct6pfr8x4" path="res://assets/ground/terrain_.png" id="2_yndu7"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://bvoodcsmeakia" path="res://scenes/effects_scenes/flamethrower.tscn" id="14_vta4w"]
 [ext_resource type="PackedScene" uid="uid://bd34y6ar4m173" path="res://scenes/move_to_hub.tscn" id="15_vta4w"]
 [ext_resource type="PackedScene" uid="uid://cwam2nbalcuv3" path="res://scenes/objects_scenes/red_mushroom.tscn" id="16_asgn5"]
+[ext_resource type="PackedScene" uid="uid://ddtdw0kurtmw0" path="res://scenes/objects_scenes/green_balloon.tscn" id="17_mcuga"]
+[ext_resource type="PackedScene" uid="uid://dabrl8yf8xrhm" path="res://scenes/objects_scenes/green_fish.tscn" id="18_8cb2a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obrmc"]
 texture = ExtResource("2_yndu7")
@@ -840,3 +842,15 @@ position = Vector2(1401, -22)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToHub"]
 position = Vector2(-866, 1)
 shape = SubResource("RectangleShape2D_mcuga")
+
+[node name="GreenBallon" parent="MoveToHub" instance=ExtResource("17_mcuga")]
+position = Vector2(-1012, 13)
+
+[node name="GreenFish" parent="MoveToHub" instance=ExtResource("18_8cb2a")]
+position = Vector2(-948, 13)
+
+[node name="GreenFish2" parent="MoveToHub" instance=ExtResource("18_8cb2a")]
+position = Vector2(-948, -8)
+
+[node name="GreenBallon2" parent="MoveToHub" instance=ExtResource("17_mcuga")]
+position = Vector2(-1012, -13)

@@ -32,14 +32,17 @@ func load_level(level_path):
 func quest_item_collected(item):
 	if("Mushroom" == item):
 		mushrooms_collected += 1
+		print(mushrooms_collected)
 		if(mushrooms_collected == 5):
 			chef_quest = true
-	elif("ballon" == item):
+	elif("balloon" == item):
 		ballons_collected += 1
+		print(ballons_collected)
 		if(ballons_collected == 4):
 			shop_keeper_quest = true
 	elif("fish" == item):
 		fish_collected +=1
+		print(fish_collected)
 		if(fish_collected == 3):
 			boat_guy_quest =true		
 	
