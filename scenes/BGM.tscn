@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c85njh3ekr54e"]
+
+[ext_resource type="AudioStream" uid="uid://d3e8d0s7xa3jo" path="res://assets/sound/MonsterHunterWilds_8-bit.mp3" id="1_o8x2f"]
+
+[node name="BGM" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_o8x2f")
+autoplay = true
+max_distance = 1e+08

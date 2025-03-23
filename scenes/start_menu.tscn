@@ -2669,7 +2669,7 @@ sources/5 = SubResource("TileSetAtlasSource_ruo1u")
 
 [node name="DesertMountains" parent="." instance=ExtResource("1_0lulb")]
 z_index = -5
-position = Vector2(-62, -68)
+position = Vector2(0, -313)
 
 [node name="Background" type="TileMapLayer" parent="."]
 z_index = -3
