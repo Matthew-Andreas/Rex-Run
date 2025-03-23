@@ -32,15 +32,15 @@ shape = SubResource("RectangleShape2D_r77uv")
 position = Vector2(-49, -174)
 
 [node name="Background" type="Sprite2D" parent="DialogSelectMenu"]
-position = Vector2(49, 134.565)
-scale = Vector2(0.76, 0.257059)
+position = Vector2(49, 128.065)
+scale = Vector2(0.76, 0.338311)
 texture = SubResource("GradientTexture2D_j1h4b")
 
 [node name="Level_1" type="Button" parent="DialogSelectMenu"]
-offset_left = 20.0
-offset_top = 119.565
-offset_right = 80.0
-offset_bottom = 150.565
+offset_left = 37.0
+offset_top = 104.0
+offset_right = 97.0
+offset_bottom = 135.0
 scale = Vector2(0.385413, 0.385413)
 theme_override_fonts/font = ExtResource("3_chg43")
 theme_override_font_sizes/font_size = 8
@@ -48,10 +48,10 @@ text = "Level 1"
 metadata/_edit_use_anchors_ = true
 
 [node name="Level_2" type="Button" parent="DialogSelectMenu"]
-offset_left = 54.0
-offset_top = 119.565
-offset_right = 114.0
-offset_bottom = 150.565
+offset_left = 20.0
+offset_top = 120.0
+offset_right = 80.0
+offset_bottom = 151.0
 scale = Vector2(0.385413, 0.385413)
 theme_override_fonts/font = ExtResource("3_chg43")
 theme_override_font_sizes/font_size = 8
@@ -59,10 +59,10 @@ text = "Level 2"
 metadata/_edit_use_anchors_ = true
 
 [node name="Level_3" type="Button" parent="DialogSelectMenu"]
-offset_left = 20.0
-offset_top = 137.565
-offset_right = 80.0
-offset_bottom = 168.565
+offset_left = 54.0
+offset_top = 120.0
+offset_right = 114.0
+offset_bottom = 151.0
 scale = Vector2(0.385413, 0.385413)
 theme_override_fonts/font = ExtResource("3_chg43")
 theme_override_font_sizes/font_size = 8
@@ -70,6 +70,17 @@ text = "Level 3"
 metadata/_edit_use_anchors_ = true
 
 [node name="Level_4" type="Button" parent="DialogSelectMenu"]
+offset_left = 20.0
+offset_top = 138.0
+offset_right = 80.0
+offset_bottom = 169.0
+scale = Vector2(0.385413, 0.385413)
+theme_override_fonts/font = ExtResource("3_chg43")
+theme_override_font_sizes/font_size = 8
+text = "Level 4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level_5" type="Button" parent="DialogSelectMenu"]
 offset_left = 54.0
 offset_top = 138.0
 offset_right = 114.0
@@ -77,7 +88,7 @@ offset_bottom = 169.0
 scale = Vector2(0.385413, 0.385413)
 theme_override_fonts/font = ExtResource("3_chg43")
 theme_override_font_sizes/font_size = 8
-text = "Level 4"
+text = "Level 5"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
@@ -86,3 +97,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="DialogSelectMenu/Level_2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="DialogSelectMenu/Level_3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="DialogSelectMenu/Level_4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="DialogSelectMenu/Level_5" to="." method="_on_level_5_pressed"]

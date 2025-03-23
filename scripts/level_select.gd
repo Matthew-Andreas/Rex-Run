@@ -23,8 +23,12 @@ func _on_level_2_pressed() -> void:
 
 
 func _on_level_3_pressed() -> void:
-	GameManager.load_level("res://scenes/example_level.tscn")
+	GameManager.load_level("res://scenes/level_scenes/level_3.tscn")
 
 
 func _on_level_4_pressed() -> void:
-	GameManager.load_level("res://scenes/example_level.tscn")
+	GameManager.load_level("res://scenes/level_scenes/level_4.tscn")
+	
+
+func _on_level_5_pressed() -> void:
+	GameManager.load_level("res://scenes/level_scenes/level_5.tscn")

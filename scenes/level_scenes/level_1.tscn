@@ -2073,7 +2073,7 @@ position = Vector2(3861.5, 712)
 [node name="10xCoin10" type="Node" parent="SecretRoom"]
 
 [node name="Coin1" parent="SecretRoom/10xCoin10" instance=ExtResource("7_m2aoh")]
-position = Vector2(3840.5, 667)
+position = Vector2(3489, 668)
 
 [node name="Coin2" parent="SecretRoom/10xCoin10" instance=ExtResource("7_m2aoh")]
 position = Vector2(3840.5, 667)
