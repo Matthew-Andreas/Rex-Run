@@ -45,7 +45,7 @@ func _on_dialog_select_menu_action_selected(action: String) -> void:
 func questFromNPC():
 	gameNode.changeVisibility(actionSelectMenu,false)
 	gameNode.changeVisibility(dialogPeice,true)
-	if GameManager.chef_quest:
+	if GameManager.shop_keeper_quest:
 		dialogText.text = "Thank you for your help. No more quests for now."
 	else:
 		dialogText.text = "Please get me 4 ballons for my sons birthday party."

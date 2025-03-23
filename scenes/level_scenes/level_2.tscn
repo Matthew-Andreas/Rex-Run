@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://kn71xmtjxi12"]
+[gd_scene load_steps=36 format=4 uid="uid://kn71xmtjxi12"]
 
 [ext_resource type="PackedScene" uid="uid://byq0fe6ubb4tf" path="res://scenes/parallax_scenes/desert_mountains.tscn" id="1_6ci25"]
 [ext_resource type="Texture2D" uid="uid://d31tct6pfr8x4" path="res://assets/ground/terrain_.png" id="2_yndu7"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://7jsjriamo1f1" path="res://scenes/effects_scenes/fire_sparks.tscn" id="13_rjd57"]
 [ext_resource type="PackedScene" uid="uid://bvoodcsmeakia" path="res://scenes/effects_scenes/flamethrower.tscn" id="14_vta4w"]
 [ext_resource type="PackedScene" uid="uid://bd34y6ar4m173" path="res://scenes/move_to_hub.tscn" id="15_vta4w"]
+[ext_resource type="PackedScene" uid="uid://cwam2nbalcuv3" path="res://scenes/objects_scenes/red_mushroom.tscn" id="16_asgn5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obrmc"]
 texture = ExtResource("2_yndu7")
@@ -600,6 +601,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asgn5"]
 size = Vector2(83.4022, 23)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcuga"]
+size = Vector2(76, 31)
+
 [node name="Level1" type="Node2D"]
 
 [node name="DesertMountains" parent="." instance=ExtResource("1_6ci25")]
@@ -626,6 +630,7 @@ slide_on_ceiling = false
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -35)
+zoom = Vector2(3, 3)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -813,3 +818,25 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstaKillBlock"]
 position = Vector2(3.70108, 1.5)
 shape = SubResource("RectangleShape2D_asgn5")
+
+[node name="YellowMushroom2" parent="." instance=ExtResource("10_tucim")]
+position = Vector2(206, -9)
+
+[node name="RedMushroom" parent="." instance=ExtResource("16_asgn5")]
+position = Vector2(268, -11)
+
+[node name="RedMushroom2" parent="." instance=ExtResource("16_asgn5")]
+position = Vector2(139, -7)
+
+[node name="YellowMushroom3" parent="." instance=ExtResource("10_tucim")]
+position = Vector2(78, -9)
+
+[node name="YellowMushroom4" parent="." instance=ExtResource("10_tucim")]
+position = Vector2(345, -7)
+
+[node name="MoveToHub" parent="." instance=ExtResource("15_vta4w")]
+position = Vector2(1401, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToHub"]
+position = Vector2(-866, 1)
+shape = SubResource("RectangleShape2D_mcuga")
