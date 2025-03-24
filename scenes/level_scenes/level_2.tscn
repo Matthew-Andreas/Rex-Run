@@ -845,14 +845,14 @@ position = Vector2(345, -7)
 position = Vector2(1401, -22)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveToHub"]
-position = Vector2(-866, 1)
+position = Vector2(-431, 3)
 shape = SubResource("RectangleShape2D_mcuga")
 
-[node name="GreenBallon" parent="MoveToHub" instance=ExtResource("17_mcuga")]
-position = Vector2(-1012, 13)
+[node name="GreenFish" parent="." instance=ExtResource("18_8cb2a")]
+position = Vector2(453, -9)
 
-[node name="GreenFish" parent="MoveToHub" instance=ExtResource("18_8cb2a")]
-position = Vector2(-948, 13)
+[node name="GreenBallon" parent="." instance=ExtResource("17_mcuga")]
+position = Vector2(389, -9)
 
 [node name="BlueFish" parent="." instance=ExtResource("19_dmwsv")]
 position = Vector2(421, -9)
