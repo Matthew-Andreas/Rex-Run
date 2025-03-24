@@ -70,6 +70,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+	if GameManager.leaveOnBoat and Input.is_action_just_pressed("interact"):
+		GameManager.load_level("res://scenes/End Scene.tscn")
+	
 	if nextToBoatGuy and Input.is_action_just_pressed("interact"):
 		interactwithNPC.emit("Boat Seller")
 	elif nextToChef and Input.is_action_just_pressed("interact"):
