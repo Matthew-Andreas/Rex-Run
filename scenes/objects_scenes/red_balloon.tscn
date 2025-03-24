@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu4yd68tjlyjl"]
+
+[ext_resource type="Texture2D" uid="uid://c47g1q0mn57ku" path="res://assets/objects/items_.png" id="1_6rhah"]
+[ext_resource type="Script" uid="uid://d30yroa1fkkp7" path="res://scripts/green_balloon.gd" id="1_i2jw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2jw3"]
+size = Vector2(8, 12)
+
+[node name="RedBalloon" type="Area2D"]
+script = ExtResource("1_i2jw3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i2jw3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6rhah")
+region_enabled = true
+region_rect = Rect2(3, 18, 10, 12)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
