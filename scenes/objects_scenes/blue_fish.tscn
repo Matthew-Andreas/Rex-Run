@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://uuwyi88nl2an"]
+
+[ext_resource type="Script" uid="uid://bghr8lr2jj5kd" path="res://scripts/green_fish.gd" id="1_keiq4"]
+[ext_resource type="Texture2D" uid="uid://dt7yqefs4x01j" path="res://assets/boat_stuff/Catch/4.png" id="2_w353i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_keiq4"]
+size = Vector2(26, 12)
+
+[node name="BlueFish" type="Area2D"]
+script = ExtResource("1_keiq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_w353i")
+region_enabled = true
+region_rect = Rect2(0, 1, 25, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_keiq4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

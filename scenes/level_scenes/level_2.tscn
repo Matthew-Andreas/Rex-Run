@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://kn71xmtjxi12"]
+[gd_scene load_steps=43 format=4 uid="uid://kn71xmtjxi12"]
 
 [ext_resource type="PackedScene" uid="uid://byq0fe6ubb4tf" path="res://scenes/parallax_scenes/desert_mountains.tscn" id="1_6ci25"]
 [ext_resource type="Texture2D" uid="uid://d31tct6pfr8x4" path="res://assets/ground/terrain_.png" id="2_yndu7"]
@@ -18,6 +18,11 @@
 [ext_resource type="PackedScene" uid="uid://cwam2nbalcuv3" path="res://scenes/objects_scenes/red_mushroom.tscn" id="16_asgn5"]
 [ext_resource type="PackedScene" uid="uid://ddtdw0kurtmw0" path="res://scenes/objects_scenes/green_balloon.tscn" id="17_mcuga"]
 [ext_resource type="PackedScene" uid="uid://dabrl8yf8xrhm" path="res://scenes/objects_scenes/green_fish.tscn" id="18_8cb2a"]
+[ext_resource type="PackedScene" uid="uid://uuwyi88nl2an" path="res://scenes/objects_scenes/blue_fish.tscn" id="19_dmwsv"]
+[ext_resource type="PackedScene" uid="uid://dey7uxnhknpk0" path="res://scenes/objects_scenes/orangefish.tscn" id="20_hsksx"]
+[ext_resource type="PackedScene" uid="uid://bu4yd68tjlyjl" path="res://scenes/objects_scenes/red_balloon.tscn" id="21_0t6po"]
+[ext_resource type="PackedScene" uid="uid://cbxajb1afrvw0" path="res://scenes/objects_scenes/yellow_balloon.tscn" id="22_0ia52"]
+[ext_resource type="PackedScene" uid="uid://bqx2hspigvrl8" path="res://scenes/objects_scenes/blue_balloon.tscn" id="23_upxur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obrmc"]
 texture = ExtResource("2_yndu7")
@@ -849,8 +854,17 @@ position = Vector2(-1012, 13)
 [node name="GreenFish" parent="MoveToHub" instance=ExtResource("18_8cb2a")]
 position = Vector2(-948, 13)
 
-[node name="GreenFish2" parent="MoveToHub" instance=ExtResource("18_8cb2a")]
-position = Vector2(-948, -8)
+[node name="BlueFish" parent="." instance=ExtResource("19_dmwsv")]
+position = Vector2(421, -9)
 
-[node name="GreenBallon2" parent="MoveToHub" instance=ExtResource("17_mcuga")]
-position = Vector2(-1012, -13)
+[node name="Orangefish" parent="." instance=ExtResource("20_hsksx")]
+position = Vector2(473, -8)
+
+[node name="RedBalloon" parent="." instance=ExtResource("21_0t6po")]
+position = Vector2(375, -9)
+
+[node name="YellowBalloon" parent="." instance=ExtResource("22_0ia52")]
+position = Vector2(399, -9)
+
+[node name="BlueBalloon" parent="." instance=ExtResource("23_upxur")]
+position = Vector2(362, -9)
