@@ -12,6 +12,7 @@ extends Node2D
 @onready var okBtn = $DialogBlock/DialogButtons2
 @onready var actionSelectMenu = $DialogBlock/DialogSelectMenu
 @onready var dialogText = $DialogBlock/Dialog/Sprite2D/DialogText
+@onready var HealthCanvas = $"../Player/HealthCanvas"
 var player
 
 func _on_interaction_area_body_entered(body: Node2D) -> void:
@@ -76,6 +77,8 @@ func closeInteraction():
 
 func _on_yes_pressed() -> void:
 	if GameManager.player_money >= 500:
+		GameManager.player_money-= 500
+		HealthCanvas.update_money_label(GameManager.player_money)
 		dialogText.text = "Ok, here is the key. Go to the end of the dock to get in the boat."
 		gameNode.boatOwned = true
 	else:

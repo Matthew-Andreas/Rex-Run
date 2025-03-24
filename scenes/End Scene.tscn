@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://beatqbwf6wq6p"]
+
+[ext_resource type="Script" uid="uid://rw46v5akxgpk" path="res://scenes/end_scene.gd" id="1_4dxn6"]
+
+[sub_resource type="Gradient" id="Gradient_u1of8"]
+colors = PackedColorArray(0.176471, 0.176471, 0.176471, 1, 0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4dxn6"]
+gradient = SubResource("Gradient_u1of8")
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_4dxn6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568.5, 323)
+scale = Vector2(18.7656, 11.0938)
+texture = SubResource("GradientTexture2D_4dxn6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 167.0
+offset_top = 94.0
+offset_right = 1192.0
+offset_bottom = 737.0
+theme_override_font_sizes/font_size = 25
+text = "                                                  You Won!
+
+You Escaped the island without being killed by the erupting volcano
+
+
+
+
+
+
+
+
+
+                                          Press E to Continue"

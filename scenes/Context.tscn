@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2358ieropjsy"]
+
+[ext_resource type="Script" uid="uid://qhwpt5dqdmme" path="res://scenes/context.gd" id="1_bypfj"]
+
+[sub_resource type="Gradient" id="Gradient_03xwo"]
+colors = PackedColorArray(0.176471, 0.176471, 0.176471, 1, 0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bypfj"]
+gradient = SubResource("Gradient_03xwo")
+
+[node name="Context" type="Node2D"]
+script = ExtResource("1_bypfj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 334)
+scale = Vector2(19.1563, 11.3438)
+texture = SubResource("GradientTexture2D_bypfj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 71.0
+offset_right = 1060.0
+offset_bottom = 602.0
+theme_override_font_sizes/font_size = 25
+text = "On the island of Isla Nublar a small dino village sits in a cave. 
+
+On one unsuspecting day the dormant volcano shaked the 
+island as it roared to life beginning it's eruption on the island. 
+
+You are Tom the dinosaur watching this all unfold knowing your
+fate is sealed until you remember you can buy a boat and leave the island. 
+
+You must run contracts to get enough money to buy a boat and sail off this island.
+
+
+
+
+                                                      Press E to continue"

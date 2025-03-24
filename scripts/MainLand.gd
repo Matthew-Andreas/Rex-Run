@@ -36,3 +36,7 @@ func changeVisibility(targetNode: Node, visibility: bool):
 
 
 	
+
+
+func _on_boat_leave_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

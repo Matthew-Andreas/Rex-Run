@@ -34,7 +34,7 @@ offset_right = 80.0
 offset_bottom = 111.5
 theme_override_fonts/font = ExtResource("2_7x8mv")
 theme_override_font_sizes/font_size = 8
-text = "Talk"
+text = "Shop"
 
 [node name="Cancel" type="Button" parent="."]
 offset_left = 20.0
