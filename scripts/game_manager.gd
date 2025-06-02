@@ -6,6 +6,7 @@ var shop_keeper_quest = false
 var SK_item1_owned = false
 var SK_item2_owned = false
 var leaveOnBoat = false
+var interactingWithNPC = false
 var current_scene = null
 var mushrooms_collected = 0
 var current_level_mushrooms_collected = 0
@@ -15,7 +16,7 @@ var fish_collected = 0
 var current_level_fish_collected = 0
 var player_money = 0
 var level_earned_money = 0
-var player_current_Health_cap := 10.0
+var player_current_Health_cap := 100.0
 var damage_mutiplier := 2
 var coin_multiplier := 1
 

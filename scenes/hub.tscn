@@ -811,6 +811,7 @@ texture = ExtResource("2_glsmu")
 scale = Vector2(2, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="FishingHut/StaticBody2D"]
+position = Vector2(-0.5, 0.5)
 polygon = PackedVector2Array(-44.25, 10.75, -24.375, 0, 48.5, 0.625)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -921,8 +922,8 @@ text = "Ok"
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogSelectMenu" parent="Boat Seller/DialogBlock" instance=ExtResource("11_fm13a")]
-position = Vector2(-25, -108.5)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-36, -154)
+scale = Vector2(0.75, 0.75)
 
 [node name="Player" parent="." instance=ExtResource("12_tmir4")]
 position = Vector2(126.5, 14.5)

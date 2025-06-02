@@ -26,12 +26,14 @@ func _on_interaction_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		body.nextToChef = false
 		gameNode.changeVisibility(dialogComponet,false)
-		
+		GameManager.interactingWithNPC = false
 
 
 func _on_game_talking_with_chef() -> void:
-	gameNode.changeVisibility(actionSelectMenu,true)
-	gameNode.changeVisibility(instructionText,false)
+	if not GameManager.interactingWithNPC: 
+		GameManager.interactingWithNPC = true
+		gameNode.changeVisibility(actionSelectMenu,true)
+		gameNode.changeVisibility(instructionText,false)
 
 
 func _on_dialog_select_menu_action_selected(action: String) -> void:
@@ -69,6 +71,7 @@ func closeInteraction():
 	gameNode.changeVisibility(dialogComponet,false)
 	dialogComponet.visible = true
 	gameNode.changeVisibility(instructionText,true)
+	GameManager.interactingWithNPC = false
 
 
 func _on_yes_pressed() -> void:
